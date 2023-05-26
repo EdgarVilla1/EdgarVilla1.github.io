@@ -331,7 +331,7 @@ h3{
     text-align: center;
 }
 .fsd{
-    margin-left: 5%;
+    margin-left: 0%;
     font-size: 40px;
      text-shadow: 1px 2px white;
    
@@ -436,4 +436,10 @@ h3{
     width: 50%;
     margin-left:25%;
     border:1px solid black;
+}
+
+.columnas{
+   column-count:2;
+   column-gap:30px;
+   column-rule:4px dotted gray;
 }
