@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="">
+    <link rel="shortcut icon" href="imagenes/logo.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Diseño.css">
+</head>
+
+
+
+<script>
+        var total;
+        function leer()
+            {var total=0;
+                for (var x=1;x<=11;x++) //Recorre las 10 preguntas
+                {
+                var res=0;
+                var nom="r"+x;
+                var resul=document.getElementsByName(nom);
+                for(var i=0;i<resul.length;i++) 
+                {
+                    if(resul[i].checked==true) 
+                        res=parseInt(resul[i].value);
+                }
+                total=total+res;
+                document.getElementById("total").innerHTML="Total: "+total;
+                }
+                if(total>15&&total<=29)
+                    document.getElementById("comentario").innerHTML="bien. mas de la mitad de tus respuestas son correctas";
+                else
+                    if(total==15)
+                    document.getElementById("comentario").innerHTML="Regular. Obtuviste la mitad de preguntas correctas";
+                    else
+                    if(total==30)
+                    document.getElementById("comentario").innerHTML="Excelente. Obtuviste todas las preguntas correctas";
+                    else
+                    if(total<=15&&total>=3)
+                    document.getElementById("comentario").innerHTML="mal. Obtuviste menos de la mitad de preguntas correctas";
+                    else
+                    if(total==3)
+                        document.getElementById("comentario").innerHTML="Una pregunta es correcta";
+                    else
+                    document.getElementById("comentario").innerHTML="Todas tus respuestas son incorrectas";
+            }
+            
+        function generar() { 
+            var total=0;
+                for (var x=1;x<=11;x++) //Recorre las 10 preguntas
+                {
+                var res=0;
+                var nom="r"+x;
+                var resul=document.getElementsByName(nom);
+                for(var i=0;i<resul.length;i++) 
+                {
+                    if(resul[i].checked==true) 
+                        res=parseInt(resul[i].value);
+                }
+                total=total+res;}
+        //Crear un objeto o instancia jsPDF
+        var doc = new jsPDF();
+        
+        //Definir el tamaño de la letra
+        doc.setFontSize(40);
+        //Color del texto
+        doc.setTextColor(9, 7, 121);
+        
+        if (total == 30) {
+            doc.text(20, 50, "Excelente resultado, obtuviste " + total + " puntos.");
+        } else {
+            if (total == 24 & total == 27) {
+                doc.text(20, 50, "Muy bien, obtuviste " + total + " puntos.");
+            } else {
+                if (total == 18 & total == 21) {
+                    doc.text(20, 50, "Bien, obtuviste " + total + " puntos.");
+                } else {
+                    if (total == 9 & total == 12) {
+                        doc.text(20, 50, "Regular, obtuviste " + total + " puntos.");
+                    } else {
+                        if (total == 6 & total > 3) {
+                            doc.text(20, 50, "Mal, obtuviste " + total + " puntos.");
+                        } else {
+                            if (total == 3 & total > 0) {
+                                doc.text(20, 50, "Muy mal, obtuviste " + total + " puntos.");
+                            } else {
+                                if (total == 0) {
+                                    doc.text(20, 50, "No obtuviste ningun punto.");
+                                }
+                            }
+                            if(total==15){
+                                doc.text(20, 50, "Bien, obtuviste " + total + " puntos.");
+                            }
+                            else{
+                                if(total==12){
+                                doc.text(20, 50, "regular, obtuviste " + total + " puntos.");
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        var string = doc.output('datauristring');
+        
+        $('iframe').attr('src', string);
+        
+        }
+        </script>
+
+<body>
+
+	<hr class="line1">
+        <header>
+            <div class="logo">
+                <a href="https://www.upslp.edu.mx/upslp/"><img src="imagenes/logo.jpg" alt="upslp"></a>
+               
+            </div>
+            
+            <table class="navb">
+                <tr>
+                    <td class="td"><a href="index.html">HOME</a></td>
+                    <td class="td"><a href="informacion.html">INFORMACION</a></td>
+                    <td class="td"><a href="actualidad.html">ACTUALIDAD</a></td>
+                    <td class="td"><a href="tecnologia.html">TECNOLOGIA</a></td>
+                    <td class="td"><a href="estadisticas.html">ESTADISTICAS</a></td>
+                    <td class="td"><a href="futuro.html">FUTURO</a></td>
+                    <td class="td"><a href="educativo.html">EDUCATIVO</a></td>
+                    <td class="td"><a href="laboral.html">LABORAL</a></td>
+                    <td class="td"><a href="referencias.html">REFERENCIAS</a></td>
+                     
+            </table>
+        </header>
+
+        <div class="">
+
+    <br>
+    <h2>CUESTIONARIO</h2>
+    <p textalign="center">---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h3>RESUELVE LAS SIGUIENTES PREGUNTAS PARA EVALUAR TU CONOCIMIENTO</h3>
+    <br>
+    <br>
+
+    <div class="ptx">
+        <ul>
+    
+            <p style="color: rgb(0, 0, 0);">¿Qué es una red de computadoras?</p><br>
+            <input type="radio" name="r1" id="r1" value="3"/>Un conjunto de computadoras conectadas entre sí<br/>
+            <input type="radio" name="r1" id="r1" value="0"/> Un programa informático<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Un dispositivo de almacenamiento<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);" >¿Cuál es el propósito principal de una red de computadoras?</p><br>
+            <input type="radio" name="r2" id="r2" value="3"/>Compartir recursos y datos<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Jugar videojuegos en línea<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Navegar por internet<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un protocolo de red?</p><br>
+            <input type="radio" name="r3" id="r3" value="0"/>Un conjunto de reglas y estándares para la comunicación en una red<br/>
+            <input type="radio" name="r3" id="r3" value="0"/> Un tipo de computadora <br/>
+            <input type="radio" name="r3" id="r3" value="3"/>Un virus informático<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un router?</p><br>
+            <input type="radio" name="r4" id="r4" value="0"/>Un dispositivo que interconecta redes y enruta el tráfico<br/>
+            <input type="radio" name="r4" id="r4" value="3"/>Una persona que configura redes<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>Un tipo de cable de red
+
+<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Cuál es el estándar más común para las redes inalámbricas?</p><br>
+            <input type="radio" name="r5" id="r5" value="0"/>Wi-Fi<br/>
+            <input type="radio" name="r5" id="r5" value="3"/>Bluetooth  <br/>
+            <input type="radio" name="r5" id="r5" value="0"/> NFC<br/>
+            <p textalign="center">---------------------------</p>
+            <br>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un firewall?</p><br>
+            <input type="radio" name="r6" id="r6" value="3"/> Un sistema de seguridad que protege una red de amenazas externas  <br/>
+            <input type="radio" name="r6" id="r6" value="0"/>Un dispositivo para conectarse a internet<br/>
+            <input type="radio" name="r6" id="r6" value="0"/>Un programa para enviar correos electrónicos<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Cuál es la función principal de una dirección IP?</p><br>
+            <input type="radio" name="r7" id="r7" value="0"/> Identificar de forma única un dispositivo en una red<br/>
+            <input type="radio" name="r7" id="r7" value="3"/>Enviar mensajes de correo electrónico<br/>
+            <input type="radio" name="r7" id="r7" value="0"/>Reproducir música en streaming<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué significa el acrónimo LAN?</p><br>
+            <input type="radio" name="r8" id="r9" value="3"/>Local Area Network (Red de Área Local).<br/>
+            <input type="radio" name="r8" id="r9" value="0"/> Large Area Network (Red de Área Amplia)<br/>
+            <input type="radio" name="r8" id="r9" value="0"/>Local Access Network (Red de Acceso Local)<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Cuál es el objetivo principal del DHCP (Dynamic Host Configuration Protocol)?</p><br>
+            <input type="radio" name="r9" id="r10" value="0"/>Asignar direcciones IP de manera automática<br/>
+            <input type="radio" name="r9" id="r10" value="0"/> Encriptar datos en una red<br/>
+            <input type="radio" name="r9" id="r10" value="3"/>Realizar copias de seguridad de archivos<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un DNS (Domain Name System)?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/>Un sistema que traduce nombres de dominio en direcciones IP<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Un tipo de virus informático<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Un software para diseñar sitios web<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+
+            <p style="color: rgb(0, 0, 0);">¿Cuál es la velocidad típica de una conexión Ethernet en una red local?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/>10/100/1000 Mbps (megabits por segundo)<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>1/10/100 Gbps (gigabits por segundo)<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> 56 Kbps (kilobits por segundo)<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+
+            <p style="color: rgb(0, 0, 0);">¿Cuál de las siguientes opciones es una tecnología de red inalámbrica de corto alcance?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Bluetooth<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Ethernet<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> DSL<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un switch de red?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/>  Un dispositivo que conecta múltiples dispositivos en una red y envía datos entre ellos<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Un tipo de cable de red<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un software para bloquear sitios web<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+            <p style="color: rgb(0, 0, 0);">¿Qué es un servidor web?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Un equipo dedicado a almacenar y entregar páginas web<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Un programa para editar imágenes<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un dispositivo para escanear documentos<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+
+             <p style="color: rgb(0, 0, 0);">¿Qué es un proxy?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Un servidor intermedio entre un cliente y un servidor de destino<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Una herramienta para realizar copias de seguridad de archivos<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un programa para reproducir videos en línea<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>
+
+            <p style="color: rgb(0, 0, 0);">¿Cuál es el objetivo principal de un VPN (Virtual Private Network)?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/>Crear una conexión segura y cifrada a través de internet<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>Descargar software gratuito<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Reparar hardware dañado<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>   
+
+             <p style="color: rgb(0, 0, 0);">¿Qué es un NAS (Network Attached Storage)?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/>Un dispositivo de almacenamiento conectado a una red<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un programa de edición de video<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Una forma de conectar impresoras en red<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>   
+
+            <p style="color: rgb(0, 0, 0);">¿Qué es un cable Ethernet?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Un cable utilizado para conectar dispositivos en una red<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>  Un tipo de cable para cargar dispositivos móviles<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un cable utilizado para transmitir señales de televisión<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>   
+
+            <p style="color: rgb(0, 0, 0);">¿Cuál es la función principal de un modem?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Convertir señales digitales en señales analógicas y viceversa<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>   Realizar copias de seguridad de archivos<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Escanear documentos<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>  
+
+            <p style="color: rgb(0, 0, 0);">¿Qué es un estándar IEEE 802.11?</p><br>
+            <input type="radio" name="r10" id="r10" value="3"/> Un estándar para redes inalámbricas (Wi-Fi)<br/>
+            <input type="radio" name="r10" id="r10" value="0"/>   Un protocolo de seguridad en internet<br/>
+            <input type="radio" name="r10" id="r10" value="0"/> Un tipo de impresora<br/>
+            <p textalign="center">---------------------------</p>
+            <br/>  
+
+
+
+
+        </ul>
+    </div>
+    <p textalign="center">---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p style="color: rgb(0, 0, 0);">La puntuación obtenida en el examen es:   </p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <input type="button" value="OBTENER TOTAL" onclick="leer()">
+
+	
+    <p textalign="center">---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    </div>
+        <footer><p class="foot">Urbano Villalón num.500, Col. La Ladrillera, San Luis Potosí, S.L.P. México, C.P. 78363 Conmutador: (444) 870 - 21 - 00 Atención Politécnica: politecnica@upslp.edu.mx</p></footer>
+</body>
+</html>

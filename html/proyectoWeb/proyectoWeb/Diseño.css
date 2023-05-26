@@ -1,0 +1,445 @@
+body{
+    font-family:arial;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+
+}
+.td{
+    font-weight: 600;
+    padding-right: 15px;
+    padding-left: 15px;
+    list-style-type: none;
+}
+a:hover{
+    color:white;
+    background-color: darkorange;
+    
+}
+header{
+    
+    display: flex;
+    min-height:  70px;
+    background-color: white;
+    color:black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.line1{
+    margin-bottom: 0px;
+    height: 5px;
+    background-color: darkorange;
+}
+
+logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+    margin-left: 10x;
+    box-shadow: 1px -1px 26px -4px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 1px -1px 26px -4px rgba(0,0,0,0.26);
+    -moz-box-shadow: 1px -1px 26px -4px rgba(0,0,0,0.26);
+
+}
+.logo img:hover{
+
+}
+.parallax{
+    		background-image: url(https://horsepowermexico.com/wp-content/uploads/2018/11/slpuniversidad.jpg);/* https://pbs.twimg.com/profile_images/2159485920/solologo.png */
+    		min-height: 300px; 
+    
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+  			opacity: 90%;
+            font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 30px;
+    
+    
+}
+footer{
+    background-color: dimgray;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+.parrafo1{
+    
+    background-color: white;
+    height: 90px;
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%;
+    transform: translate(1px,38px);
+    -webkit-transform: translate(1px,38px);
+    -moz-transform: translate(1px,38px);
+    text-align: center;
+    align-items: center;
+    border-radius: 22px 22px 22px 22px;
+-webkit-border-radius: 22px 22px 22px 22px;
+-moz-border-radius: 22px 22px 22px 22px;
+    border: 5px inset darkorange;
+    background: white;
+
+}
+.foot{
+    color: white;
+    font-size: 10px;
+    margin-top: 200px;
+    padding: 50px;
+}
+.s1{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.personal{
+    border: 1px solid black;
+    margin: 10%;
+    padding: 20px;
+    box-shadow: 5px 10px #888888;
+}
+.pag1{
+    margin-top: 30px;
+    position: relative;
+    background-color: gray;
+    height: 400px;
+    width: 100%;
+    
+}
+.pag2{
+    margin-top: 30px;
+    position: relative;
+    background-color:#040F3D;
+    height: 400px;
+    width: 100%;
+    
+}
+.pag3{
+    margin-top: 30px;
+    position: relative;
+    background-color:darkorange;
+    height: 100px;
+    width: 100%;
+    
+}
+.ifrm{
+    width: 700px;
+    height: 300px;
+    border: 1px solid gray;
+    transform: translate(50px,48px);
+    -webkit-transform: translate(50px,48px);
+    -moz-transform: translate(50px,48px);
+    background-image: url(https://www.upslp.edu.mx/upslp/wp-content/uploads/2022/01/Postal-ITI-web-proceso-2022-1.jpg)
+}
+.ifrm:hover,.ifrm2:hover{
+    box-shadow: 1px 2px 15px 2px rgba(0,0,0,0.77);
+-webkit-box-shadow: 1px 2px 15px 2px rgba(0,0,0,0.77);
+-moz-box-shadow: 1px 2px 15px 2px rgba(0,0,0,0.77);
+    
+}
+.ifrm2{
+    padding-left: 30px;
+    width: 40%;
+    height: 300px;
+    border: 1px solid white;
+    transform: translate(802px,-250px);
+    -webkit-transform: translate(802px,-250px);
+    -moz-transform: translate(802px,-250px);
+    background-color: white;
+    color:black;
+    border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+}
+.navb{
+    position: static;
+}
+subt1{
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+    padding-left: 30px;
+}
+.circle{
+     width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    transform: translate(752px,40px);
+    -webkit-transform: translate(752px,40px);
+    -moz-transform: translate(752px,40px);
+
+   background-color: white;
+    border-radius: 300px 300px 300px 300px;
+-webkit-border-radius: 300px 300px 300px 300px;
+-moz-border-radius: 300px 300px 300px 300px;
+}
+.circle2{
+     width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    transform: translate(102px,-250px);
+    -webkit-transform: translate(102px,-250px);
+    -moz-transform: translate(102px,-250px);
+
+   background-image: url(https://www.upslp.edu.mx/upslp/wp-content/uploads/2022/01/Postal-ITI-web-proceso-2022-1.jpg)
+    border-radius: 300px 300px 300px 300px;
+-webkit-border-radius: 300px 300px 300px 300px;
+-moz-border-radius: 300px 300px 300px 300px;
+}
+
+@media (max-width: 699px) and (min-width:376px)
+{
+    header{
+        flex-direction: column;
+        display: block;
+    }
+    .navb{
+        padding: 10px 0px;
+    }
+    .td{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .td:hover{
+        background-color: #7E7E7E;
+        color: white;
+    }
+
+}
+@media (max-width: 375px)
+{
+    header{
+        flex-direction: column;
+    }
+    .navb{
+        padding: 5px 0px;
+    }
+}
+.container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+}
+.container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px
+}
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+.container-form a i{
+    color: orange;
+    margin-right: 10px;
+}
+.container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: orange;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.container-form .btn-enviar:hover{
+    background: #e39403;
+}
+h3{
+    background-color: darkorange;
+    text-align: center; 
+    width: 30%;
+    margin-left: 35%;
+}
+.lts{
+    color: white;
+    margin-left: 90px;
+    background-color: darkblue;
+    border: 1px black solid;
+    width: 80%;
+    padding: 5px;
+}
+.lts2{
+    color: white;
+    margin-left: 15%;
+    background-color: darkorange;
+    border: 1px black solid;
+    width: 60%;
+}
+.s1{
+    margin: 30px;
+    border: 1px black solid;
+    padding:2px;
+}
+.fs{
+    margin-left: 35%;
+    font-size: 40px;
+     text-shadow: 1px 2px white;
+    background-color: darkorange;
+    width: 15%;
+    text-align: center;
+}
+.fs2{
+    margin-left: 25%;
+    font-size: 30px;
+    background-color: darkorange;
+    width: 50%;
+    text-align: center;
+}
+.fsd{
+    margin-left: 0%;
+    font-size: 40px;
+     text-shadow: 1px 2px white;
+   
+    text-align: center;
+}
+.list1:hover{
+    background-color: darkgray;
+        color:white;
+}
+.prof{
+    display: inline-block;
+    margin-left:50px;
+    margin-top: 15px;
+    border:1px solid black;
+    width: 600px;
+    height: 700px;
+    background-color: darkorange;
+    border-radius: 15px;
+}
+.txx{
+    background-color: white;
+    margin: 45px;
+    width: 85%;
+    height: 85%;
+    padding: 15px;
+    text-align: justify;
+}
+.prof:hover{
+     box-shadow: -14px 10px 5px -5px rgba(0,0,0,0.75);
+-webkit-box-shadow: -14px 10px 5px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: -14px 10px 5px -5px rgba(0,0,0,0.75);
+    
+}
+.gll{
+    background-color: lightgray;
+    margin: 1em;
+    width: 70%;
+    margin-left: 15%;
+}
+.ig{
+    max-width: 100%;
+    margin-bottom: 0.5em;
+    display:block;
+    outline:2px solid #fff;
+    opacity: 50%;
+}
+.gallery{
+    columns:5 220px;
+    column-gap:0.5em;
+}
+.ig:hover{
+    opacity: 100%;
+    
+}
+.sbg{
+    margin-left:35%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: darkorange;
+    width: 35%;
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    color: black;
+    font-size: 40px;
+    text-shadow: white 2px 5px;
+}
+.tsp{
+    text-align: center;
+    margin-left: 100px;
+    font-size: 160%;
+    text-shadow: darkorange 2px 5px;
+    
+}
+.sdf{
+    margin-left: 150px;
+    margin-right: 90px;
+    border: 1px black solid;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: darkblue;
+    color:white;
+    text-shadow: black 2px 2px;
+    line-height: 50px;
+    padding: 20px;
+    border-radius: 5px 4px;
+    margin-top:20px;
+}
+.sdf li:hover{
+    background-color: white;
+    color: black;
+    text-shadow: white 2px 2px;
+}
+.vid{
+    margin-left:100px;
+    
+}
+.blog1{
+    margin-top:50px;
+    height: 500px;
+    width: 50%;
+    margin-left:25%;
+    border:1px solid black;
+}
+
+.columnas{
+   column-count:2;
+   column-gap:30px;
+   column-rule:4px dotted gray;
+}
